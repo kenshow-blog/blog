@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Blog</title>
+     <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
+    <script type="text/javascript">
+      WebFontConfig = {
+        google: { families: [ 'Unica+One::latin' ] }
+      };
+      (function() {
+        var wf = document.createElement('script');
+        wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
+          '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+        wf.type = 'text/javascript';
+        wf.async = 'true';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(wf, s);
+      })();
+    </script>
+  </head>
+
+  <body>
+    <header>
+     <h1><a class="title"  href="/" >Blog</a></h1>
+     <% if user_signed_in? %>
+            <div class="top-menu">
+            <ul>
+              <li> <a  href="/users/<%= current_user.id %>">My page</a>  </li>
+               <li> <%= link_to "SignOut", destroy_user_session_path, method: :delete %></li>
+            <li><a href="/blogs/new">New</a></li>
+            </ul>
+            </div>
+        <% else %>
+        <div class="top">
+        <ul>
+           <li> <%= link_to "SignIn", new_user_session_path %></li>
+            <li><%= link_to "NewRegister", new_user_registration_path %></li>
+        </ul>
+        </div>
+        <% end %>
+     </header>
+    <%= yield %>
+    
+     <footer>
+      <p>
+        Copyright Blog 2019.
+      </p>
+    </footer>
+  </body>
+</html>

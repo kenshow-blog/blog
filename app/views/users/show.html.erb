@@ -1,0 +1,11 @@
+<div class="body">
+<div class="body-content-abc">
+  
+  <div class="name"><%= @nickname %>さんの投稿一覧</div>
+  <% @blogs.each do |blog| %>
+    <div class="body-content" style="background-image: url(<%= blog.image %>);">
+      <div class="tweet"><%= simple_format(blog.text) %></div>
+    </div>
+  <% end %>
+</div>
+</div>

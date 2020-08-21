@@ -1,0 +1,222 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+html{
+    font-family:"yuGothic",sans-serif;
+    box-sizing: border-box;
+}
+header{
+    height: 100px;
+    background-color: #4DB56A;
+    padding-left: 50px;
+    font-family:"Seymour one",sans-serif;
+    font-size: 20px;
+    color:#eeeeee05;
+    line-height: 100px;
+    letter-spacing: 1px;
+    display: flex;
+}
+a{   text-decoration: none;
+ color:#eee;
+}
+.title{
+    
+    position:absolute;
+    top:5px;
+}
+.title:hover{
+    text-decoration: underline;
+}
+.top-menu{
+        width:400px;
+        position: absolute;
+        right:10px;
+    
+}
+.top-menu ul{
+    display: flex;
+    justify-content: space-around;
+}
+.top-menu li:hover{
+    text-decoration: underline;
+}
+.top{
+        width:400px;
+        position: absolute;
+        right:10px;
+    
+}
+.top ul{
+    display: flex;
+    justify-content: space-around;
+}
+
+.top li:hover{
+   text-decoration: underline;
+}
+.body{
+    padding-top: 100px;
+   border: none;
+  width:70%;
+  text-align:center;
+ margin:auto;
+ height:100vh;
+}
+.body-content{
+    margin: 20px 0;
+    padding: 30px;
+    position: relative;
+    height: 400px;
+    color: black;
+    background-size: cover;
+    background-position: center center;
+    border-radius: 3px;
+    box-shadow: 0 0 10px rgba(41, 41, 41, 0.2);
+    background-color: #00000021;
+
+    background-repeat:  no-repeat;                         /* 画像の繰り返しを指定  */              
+    background-position:center center;                     /* 画像の表示位置を指定  */
+    background-size:contain;                               /* 画像のサイズを指定    */
+    width:100%;                                            /* 横幅のサイズを指定    */
+    height:400px;   
+}
+.body-content li{
+    box-shadow: 0 0 10px rgba(70, 70, 70, 0.2);
+}
+.name a{
+    color: black;
+    position: relative;
+    right:-450px;
+    bottom:-87px;
+    font-size: 1.5rem
+}
+.name{
+    color: black;
+    position: relative;
+    right:-450px;
+    bottom:-400px;
+    font-size: 1.5rem
+}
+.tweet{
+    text-decoration: none;
+    margin:100px 0;
+}
+.body-content ul{
+    position:relative;
+    left:-46px;
+    bottom:-322px;
+    font-size: 30px;
+    display:flex;
+    justify-content:left;
+}
+.body-content li{
+    border-radius: 5px;
+    overflow: hidden;
+    margin:0 30px;
+    background-color:#4DB56A; 
+}
+
+.body-content li:hover{
+
+text-decoration: underline;
+}
+
+
+.tweet-comment input[type=text], .tweet-comment textarea{
+  display:block;
+  width:100%;
+  margin-bottom:10px;
+  padding:15px;
+  outline:none;
+  border:2px solid black;
+  border-radius: 4px;
+  color:#333;
+}
+.tweet-comment textarea{
+  height:150px;
+}
+.tweet-comment input[type=submit]{
+ display: block;
+    width: 200px;
+    margin: 40px auto 0;
+    padding: 15px;
+    border-radius: 5px;
+    background-color: #00000057;
+    color: #fff;
+    cursor: pointer;
+}
+.tweet-comment input[type=submit]:hover{
+  background-color:rgba(255,255,255,0.05);
+  
+}
+.name-show a{
+    color: black;
+    position: relative;
+    right:-450px;
+    bottom:-282px;
+    font-size: 1.5rem;
+}
+.comments{
+    padding: 5px;
+    margin-top: 15px;
+}
+.comments a{
+    color:black;
+}
+.container{
+    margin: 20px 0;
+    padding: 30px;
+    box-shadow: 0 0 10px rgba(41, 41, 41, 0.2);
+    background-color: white;
+    box-sizing: border-box;
+}
+h4 {
+    margin-top: 40px;
+}
+.success   a{
+    color:black;
+}
+.success a:hover{
+     text-decoration: underline;
+}
+footer p{
+    text-align: center;
+}
+.body-content .abc{
+    background-repeat:  no-repeat;                         /* 画像の繰り返しを指定  */              
+    background-position:center center;                     /* 画像の表示位置を指定  */
+    background-size:contain;                               /* 画像のサイズを指定    */
+    width:100%;                                            /* 横幅のサイズを指定    */
+    height:100vh;
+    color:red;
+}
+.section :hover{
+     text-decoration: underline
+}
+.section a{
+    color:black;
+}
+.section a:hover{
+    text-decoration: underline
+}
+form input, form textarea {
+    width: 100%;
+    margin: 5px 0 15px;
+    padding: 10px;
+    border: 1px solid #D8D8D8;
+    border-radius: 5px;
+    font-family: "游ゴシック", "YuGothic";
+}

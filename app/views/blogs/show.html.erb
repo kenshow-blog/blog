@@ -1,0 +1,43 @@
+<div class="body">
+  <div  class="body-content" style="background-image: url(<%= @blog.image %>);">
+    <% if user_signed_in? && current_user.id == @blog.user_id %>
+      <ul >
+        <li>
+          <%= link_to 'EDIT' ,"/blogs/#{@blog.id}/edit", method: :get %>
+        </li>
+        <li>
+          <%= link_to 'DESTROY', "/blogs/#{@blog.id}", method: :delete %>
+        </li>
+     </ul>
+    <% end %>  
+    <%= simple_format(@blog.text) %>
+    <span class="name-show">
+      <a href="/users/<%= @blog.user.id %>">
+        <span>投稿者   </span><%= @blog.user.nickname %>
+      </a>
+    </span>
+  </div>
+  <div class="container">
+<div class="tweet-container">
+  <% if current_user %>
+  <%= form_tag("/blogs/#{@blog.id}/comments",method: :post) do %>
+   <div class="tweet-comment">
+  <textarea name="text" placeholder="COMMENT" rows="2" cols="30"></textarea>
+  <input type="submit" value="SENT">
+  </div>
+  <% end %>
+  <% end %>
+  <div class="comments">   
+      <h4>＜コメント一覧＞</h4>
+      <% if @comments %>
+        <% @comments.each do |comment| %>
+          <p>
+            <strong><%= link_to comment.user.nickname, "/users/#{comment.user_id}" %>：</strong>
+            <%= comment.text %>
+          </p>
+        <% end %>
+      <% end %>
+    </div>
+</div>
+</div>
+</div>
